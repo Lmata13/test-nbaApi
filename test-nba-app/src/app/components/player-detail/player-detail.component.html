@@ -1,0 +1,22 @@
+
+<div class="card mb-3" *ngIf="playerNotFound !== true">
+  <h5 class="card-header">{{player?.lastName}}, {{player?.firstName}}</h5>
+  <div class="card-body">
+    <div class="card-text">
+      <div class="row">
+        <div class="col-sm-4"> <b>Name:</b> {{player?.firstName}} </div>
+        <div class="col-sm-4"> <b>Surname:</b> {{player?.lastName}} </div>
+        <div class="col-sm-4"> <b>Birth Date:</b> {{player?.dateOfBirthUTC | date}} </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="playerNotFound === true" class="player-not-found">
+  <h2>We are sorry but we could not find the player requested.</h2>
+</div>
+
+<div class="text-right">
+  <button type="button" class="btn btn-info" [routerLink]="['/players']">Go back</button>
+</div>
+

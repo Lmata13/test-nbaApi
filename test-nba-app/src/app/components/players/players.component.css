@@ -1,0 +1,13 @@
+.player-color { color: #1570b5 }
+.content-list h5 {
+    color: #989898;
+}
+
+.table-hover tbody tr:hover {
+    cursor: pointer;
+}
+
+.table-container {
+    max-height: 490px;
+    overflow-x: auto;
+}

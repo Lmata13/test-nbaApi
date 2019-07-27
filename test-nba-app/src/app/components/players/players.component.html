@@ -1,0 +1,24 @@
+
+<div class="content-list">
+  <div class="mb-5"> 
+    <h5> If you want to know more, click on the player: </h5>
+  </div>
+  <div class="table-container">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Full Name</th>
+          <th scope="col">Team Name</th>
+          <th scope="col">Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let player of _players" routerLink="/player/{{player.id}}"> 
+          <td class="player-color">{{player.fullName}}</td>
+          <td>{{player.teamName}}</td>
+          <td>{{player.age}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
